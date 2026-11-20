@@ -3,179 +3,165 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>카카오톡 OX 퀴즈 10문제 | 어르신 스마트폰 교실</title>
-<meta name="description" content="카카오톡 숨은 기능 OX 퀴즈 10문제. 로그인 없이 바로 풀 수 있는 큰 글씨 퀴즈입니다. O 또는 X를 눌러 보세요.">
-<meta name="theme-color" content="#FFF7EC">
+<title>카카오톡 OX 퀴즈 20문항 | 숨은 기능 점검</title>
+<meta name="description" content="카카오톡 숨은 기능 OX 퀴즈 20문항. 조용히 보내기, 스포 방지, 메시지 예약, 조용히 나가기까지. 로그인 없이 바로 풀 수 있습니다.">
+<meta name="theme-color" content="#FFFFFF">
 <meta property="og:type" content="website">
-<meta property="og:title" content="카카오톡 OX 퀴즈 10문제">
-<meta property="og:description" content="O와 X만 누르면 됩니다. 큰 글씨로 편하게 풀어 보세요.">
+<meta property="og:title" content="카카오톡 OX 퀴즈 · 20문항">
+<meta property="og:description" content="카카오톡 숨은 기능, 제대로 알고 계십니까. O와 X로 20문항 점검.">
 <meta property="og:image" content="https://yigoo29-gif.github.io/kakaotalk-ox-quiz/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='4' y='6' width='32' height='24' rx='10' fill='%23FFD9A8'/%3E%3Ccircle cx='15' cy='18' r='2.6' fill='%23C9601B'/%3E%3Ccircle cx='22' cy='18' r='2.6' fill='%23C9601B'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%2316233A'/%3E%3Ccircle cx='15' cy='20' r='5.2' fill='none' stroke='%23fff' stroke-width='2.3'/%3E%3Cpath d='M25 15.4l8.2 9.2M33.2 15.4L25 24.6' stroke='%23fff' stroke-width='2.3' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
   :root{
-    --cream:#FFF7EC;
-    --card:#FFFFFF;
-    --ink:#2B2118;
-    --ink-soft:#5B4A38;
-    --orange:#EF7C2A;
-    --orange-deep:#C9601B;
-    --orange-soft:#FFE7CE;
-    --green:#1E7A50;
-    --green-bg:#E9F6EF;
-    --green-line:#8FD0AC;
-    --red:#B93B31;
-    --red-bg:#FDECE9;
-    --red-line:#F1B5AD;
-    --shadow:0 8px 22px rgba(96,60,24,.12);
+    --bg:#F3F4F6;
+    --surface:#FFFFFF;
+    --ink:#111722;
+    --ink-2:#4B5563;
+    --ink-3:#8B93A1;
+    --line:#E2E5EA;
+    --line-soft:#EDEFF2;
+    --navy:#16233A;
+    --navy-2:#243552;
+    --ok:#0E6B52;
+    --ok-soft:#F0F6F3;
+    --no:#8E3A34;
+    --no-soft:#FAF2F1;
+    --shadow:0 1px 2px rgba(17,23,34,.04),0 10px 30px rgba(17,23,34,.05);
   }
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-  html{font-size:20px}
+  html{font-size:19px}
   body{
-    margin:0;
-    background:var(--cream);
-    color:var(--ink);
+    margin:0;background:var(--bg);color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR","Nanum Gothic",sans-serif;
-    font-size:20px;
-    line-height:1.6;
-    -webkit-text-size-adjust:100%;
-    padding-bottom:calc(28px + env(safe-area-inset-bottom));
+    font-size:19px;line-height:1.65;-webkit-text-size-adjust:100%;
+    padding-bottom:calc(32px + env(safe-area-inset-bottom));
   }
-  .wrap{max-width:560px;margin:0 auto;padding:0 16px}
+  .wrap{max-width:600px;margin:0 auto;padding:0 18px}
 
-  /* ---------- progress ---------- */
+  /* ---------- header ---------- */
   header.top{
-    position:sticky;top:0;z-index:10;
-    background:rgba(255,247,236,.97);
-    border-bottom:1px solid #F2E0C9;
-    padding:12px 16px 10px;
-    padding-top:calc(12px + env(safe-area-inset-top));
+    position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);
+    -webkit-backdrop-filter:saturate(180%) blur(12px);backdrop-filter:saturate(180%) blur(12px);
+    border-bottom:1px solid var(--line);
+    padding-top:calc(0px + env(safe-area-inset-top));
   }
-  .top-in{max-width:560px;margin:0 auto}
-  .top-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
-  .brand{display:flex;align-items:center;gap:8px;font-size:19px;font-weight:900;color:var(--orange-deep);letter-spacing:-.02em}
-  .brand svg{width:30px;height:30px;flex:none}
-  .count{font-size:24px;font-weight:900;color:var(--ink);font-variant-numeric:tabular-nums}
-  .count small{font-size:19px;font-weight:800;color:var(--ink-soft)}
-  .bar{height:16px;border-radius:99px;background:#F6E3CC;margin-top:10px;overflow:hidden}
-  .bar-fill{height:100%;width:0%;border-radius:99px;background:linear-gradient(90deg,#FFB876,var(--orange));transition:width .45s cubic-bezier(.2,.8,.2,1)}
-  .bar-fill.done{background:linear-gradient(90deg,#7CC59B,var(--green))}
+  .top-in{max-width:600px;margin:0 auto;padding:14px 18px 12px}
+  .top-row{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+  .brand{font-size:15px;font-weight:700;letter-spacing:.14em;color:var(--navy)}
+  .brand i{font-style:normal;color:var(--ink-3);font-weight:400;padding:0 4px}
+  .count{font-size:15px;font-weight:600;color:var(--ink-3);letter-spacing:.04em;font-variant-numeric:tabular-nums}
+  .count b{font-size:19px;font-weight:700;color:var(--ink);letter-spacing:0}
+  .bar{height:3px;background:var(--line-soft);margin-top:12px;overflow:hidden}
+  .bar-fill{height:100%;width:0;background:var(--navy);transition:width .45s cubic-bezier(.2,.8,.2,1)}
 
   /* ---------- question card ---------- */
-  main{padding-top:18px}
+  main{padding-top:20px}
   .card{
-    background:var(--card);
-    border:1px solid #F2E5D4;
-    border-radius:28px;
-    padding:18px 18px 24px;
-    box-shadow:var(--shadow);
-    animation:rise .34s ease both;
+    background:var(--surface);border:1px solid var(--line);border-radius:14px;
+    padding:20px 20px 24px;box-shadow:var(--shadow);
+    animation:rise .32s ease both;
   }
-  @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-  .illust{display:flex;justify-content:center;margin:2px 0 6px}
-  .illust svg{width:clamp(112px,30vw,140px);height:clamp(112px,30vw,140px)}
-  .tag{display:block;text-align:center;font-size:17px;font-weight:800;color:var(--orange-deep);letter-spacing:.02em;margin-bottom:10px}
+  @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .card-head{display:flex;align-items:center;gap:11px}
+  .pict{width:34px;height:34px;flex:none;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:9px;background:#FBFBFC}
+  .pict svg{width:22px;height:22px;display:block}
+  .tag{font-size:12.5px;font-weight:700;letter-spacing:.16em;color:var(--ink-2);flex:1 1 auto;min-width:0}
+  .num{
+    font-size:34px;font-weight:300;color:#D7DBE2;letter-spacing:.01em;line-height:1;
+    font-variant-numeric:tabular-nums;
+  }
+  .rule{height:1px;background:var(--line-soft);margin:16px 0 20px}
   .qtext{
-    margin:0 0 22px;
-    font-size:clamp(23px,6.3vw,29px);
-    font-weight:900;
-    line-height:1.52;
-    letter-spacing:-.015em;
-    word-break:keep-all;
-    text-align:center;
+    margin:0 0 26px;font-size:clamp(20px,5.4vw,25px);font-weight:600;
+    line-height:1.62;letter-spacing:-.012em;word-break:keep-all;
   }
-  .choices{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .choices{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   .choice{
-    position:relative;
-    appearance:none;border:none;margin:0;padding:0;
-    border-radius:24px;color:#fff;
-    font-family:inherit;font-weight:900;
-    font-size:clamp(50px,16vw,66px);
-    height:clamp(120px,25vh,164px);
-    display:flex;align-items:center;justify-content:center;
-    cursor:pointer;touch-action:manipulation;
-    transition:transform .1s ease,filter .2s ease,opacity .2s ease;
-    box-shadow:0 7px 0 rgba(0,0,0,.16),0 12px 22px rgba(96,60,24,.18);
+    appearance:none;border:none;margin:0;padding:0;border-radius:12px;color:#fff;
+    font-family:inherit;cursor:pointer;touch-action:manipulation;
+    height:clamp(104px,22vh,142px);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+    transition:transform .12s ease,box-shadow .2s ease,opacity .2s ease,filter .2s ease;
   }
-  .choice.o{background:linear-gradient(165deg,#35A97A,#1B6E49)}
-  .choice.x{background:linear-gradient(165deg,#D9564A,#AC3329)}
-  .choice:active{transform:translateY(4px);box-shadow:0 3px 0 rgba(0,0,0,.16),0 6px 12px rgba(96,60,24,.18)}
-  .choice:focus-visible{outline:5px solid #2B2118;outline-offset:4px}
-  .choice .glyph{line-height:1}
-  .choice.dim{filter:saturate(.5) brightness(.9);opacity:.5}
-  .choice.correct{box-shadow:0 0 0 6px #FFD9A8,0 7px 0 rgba(0,0,0,.16),0 12px 22px rgba(96,60,24,.18);animation:pulse .5s ease}
-  .choice.wrong{animation:shake .42s ease}
-  .choice.correct::after,.choice.wrong::after{
-    position:absolute;top:-14px;right:-10px;
-    width:46px;height:46px;border-radius:50%;
-    display:flex;align-items:center;justify-content:center;
-    font-size:26px;font-weight:900;color:#fff;
-    box-shadow:0 4px 10px rgba(0,0,0,.2);
-  }
-  .choice.correct::after{content:"✓";background:#1E7A50}
-  .choice.wrong::after{content:"✕";background:#B93B31}
-  @keyframes pulse{0%{transform:scale(1)}45%{transform:scale(1.05)}100%{transform:scale(1)}}
-  @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-7px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+  .choice.o{background:var(--ok)}
+  .choice.x{background:var(--no)}
+  .choice .glyph{font-size:clamp(38px,12vw,52px);font-weight:600;line-height:1;letter-spacing:.02em}
+  .choice .cap{font-size:12.5px;font-weight:500;letter-spacing:.2em;color:rgba(255,255,255,.72);margin-top:6px}
+  .choice:hover{filter:brightness(1.08)}
+  .choice:active{transform:translateY(2px);filter:brightness(.96)}
+  .choice:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+  .choice.dim{opacity:.32;filter:grayscale(.4)}
+  .choice.correct{box-shadow:0 0 0 3px #fff,0 0 0 5px var(--navy)}
+  @keyframes nudge{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+  .choice.wrong{animation:nudge .32s ease}
+  .choice:disabled{cursor:default}
 
   /* ---------- feedback ---------- */
-  .feedback{
-    margin-top:18px;border-radius:26px;padding:20px 18px 22px;
-    border:2px solid var(--green-line);background:var(--green-bg);
-    animation:rise .3s ease both;
+  .fb{
+    margin-top:16px;background:var(--surface);border:1px solid var(--line);
+    border-left:4px solid var(--ok);border-radius:4px 14px 14px 4px;
+    padding:20px 20px 20px;animation:rise .28s ease both;
   }
-  .feedback.bad{border-color:var(--red-line);background:var(--red-bg)}
-  .fb-head{display:flex;align-items:center;gap:10px;font-size:clamp(22px,5.8vw,26px);font-weight:900;color:var(--green)}
-  .feedback.bad .fb-head{color:var(--red)}
-  .fb-head .icon{width:46px;height:46px;flex:none}
-  .fb-right{margin-top:10px;font-size:21px;font-weight:900;color:var(--ink)}
-  .fb-explain{
-    margin-top:12px;background:#fff;border:1px dashed #E4D2B9;border-radius:18px;
-    padding:15px 16px;font-size:20px;line-height:1.62;color:var(--ink-soft);word-break:keep-all;
+  .fb.bad{border-left-color:var(--no)}
+  .fb-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .badge{
+    display:inline-flex;align-items:center;gap:7px;
+    font-size:13px;font-weight:700;letter-spacing:.1em;
+    padding:5px 10px;border-radius:6px;background:var(--ok-soft);color:var(--ok);
   }
-  .fb-explain b{color:var(--ink);font-weight:900}
+  .fb.bad .badge{background:var(--no-soft);color:var(--no)}
+  .badge svg{width:15px;height:15px}
+  .fb-note{font-size:14.5px;color:var(--ink-3);font-weight:500}
+  .fb-why{margin:14px 0 0;font-size:17.5px;line-height:1.72;color:var(--ink-2);word-break:keep-all}
+  .fb-why b{color:var(--ink);font-weight:700}
   .next{
-    width:100%;margin-top:16px;height:76px;border:none;border-radius:20px;
-    background:var(--orange);color:#fff;font-family:inherit;font-size:26px;font-weight:900;
-    box-shadow:0 7px 0 var(--orange-deep);cursor:pointer;touch-action:manipulation;
+    width:100%;margin-top:20px;height:64px;border:none;border-radius:11px;
+    background:var(--navy);color:#fff;font-family:inherit;font-size:19px;font-weight:700;
+    letter-spacing:.04em;cursor:pointer;touch-action:manipulation;transition:background .18s ease;
   }
-  .next:active{transform:translateY(3px);box-shadow:0 4px 0 var(--orange-deep)}
-  .next:focus-visible{outline:5px solid #2B2118;outline-offset:4px}
+  .next:hover{background:var(--navy-2)}
+  .next:active{transform:translateY(1px)}
+  .next:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
 
   /* ---------- result ---------- */
-  .result{animation:rise .4s ease both}
-  .result-card{
-    background:#fff;border:1px solid #F2E5D4;border-radius:30px;
-    padding:26px 20px 24px;text-align:center;box-shadow:var(--shadow);
-  }
-  .result-card .mascot{width:clamp(158px,46vw,212px);height:auto;margin:0 auto 6px;display:block;border-radius:26px}
-  .result-title{font-size:clamp(24px,6.4vw,29px);font-weight:900;margin:6px 0 2px;word-break:keep-all}
-  .score-line{margin:14px 0 4px}
-  .score-num{font-size:clamp(60px,19vw,82px);font-weight:900;color:var(--orange);line-height:1;font-variant-numeric:tabular-nums}
-  .score-sub{font-size:22px;font-weight:800;color:var(--ink-soft);margin-top:6px}
-  .stamp{display:inline-block;margin-top:8px;padding:8px 18px;border-radius:99px;background:var(--orange-soft);color:var(--orange-deep);font-weight:900;font-size:20px}
-  .msg{margin:18px 0 0;font-size:21px;line-height:1.66;color:var(--ink-soft);word-break:keep-all;text-align:center}
-  .msg b{color:var(--ink)}
-  .review{margin-top:20px;text-align:left;background:#FFFDF9;border:1px solid #F2E5D4;border-radius:20px;padding:14px 16px}
-  .review h2{font-size:19px;margin:0 0 8px;color:var(--orange-deep);font-weight:900}
-  .review ul{margin:0;padding-left:22px;font-size:18px;color:var(--ink-soft);line-height:1.6}
-  .review li{margin:6px 0}
+  .result{animation:rise .38s ease both;padding-top:20px}
+  .result-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:28px 22px 24px}
+  .res-label{display:block;font-size:12.5px;font-weight:700;letter-spacing:.18em;color:var(--ink-3)}
+  .res-title{margin:10px 0 0;font-size:clamp(25px,6.6vw,30px);font-weight:700;letter-spacing:-.02em;line-height:1.4;word-break:keep-all}
+  .res-sub{margin:8px 0 0;font-size:17px;color:var(--ink-2);word-break:keep-all}
+  .score{display:flex;align-items:baseline;gap:8px;margin:22px 0 0;padding-bottom:22px;border-bottom:1px solid var(--line-soft)}
+  .score-num{font-size:clamp(60px,17vw,76px);font-weight:300;color:var(--navy);line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+  .score-den{font-size:20px;font-weight:500;color:var(--ink-3)}
+  .res-msg{margin:22px 0 0;font-size:17px;line-height:1.75;color:var(--ink-2);word-break:keep-all}
+  .res-msg b{color:var(--ink);font-weight:700}
+  .block{margin-top:26px}
+  .block h2{margin:0 0 12px;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--ink-2)}
+  .kf{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-soft)}
+  .kf li{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);font-size:16.5px;line-height:1.6;color:var(--ink-2);word-break:keep-all}
+  .kf li span.i{flex:none;width:22px;font-size:12px;font-weight:700;color:var(--ink-3);padding-top:3px;font-variant-numeric:tabular-nums}
+  .kf li b{color:var(--ink);font-weight:700}
+  .wrongs{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-soft)}
+  .wrongs li{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line-soft);font-size:16px;line-height:1.6;color:var(--ink-2);word-break:keep-all}
+  .wrongs li span.n{flex:none;width:26px;font-size:13px;font-weight:700;color:var(--ink-3);padding-top:3px;font-variant-numeric:tabular-nums}
+  .wrongs li em{font-style:normal;font-weight:700;color:var(--navy)}
   .again{
-    width:100%;margin-top:20px;height:80px;border:none;border-radius:22px;
-    background:linear-gradient(165deg,#35A97A,#1B6E49);color:#fff;font-family:inherit;
-    font-size:27px;font-weight:900;box-shadow:0 7px 0 #15583A;cursor:pointer;touch-action:manipulation;
+    width:100%;margin-top:26px;height:62px;border:1px solid var(--navy);border-radius:11px;
+    background:transparent;color:var(--navy);font-family:inherit;font-size:18px;font-weight:700;
+    letter-spacing:.04em;cursor:pointer;touch-action:manipulation;
   }
-  .again:active{transform:translateY(3px);box-shadow:0 4px 0 #15583A}
-  .again:focus-visible{outline:5px solid #2B2118;outline-offset:4px}
-  .foot{text-align:center;font-size:17px;color:#9D8B77;margin:18px 0 0;line-height:1.5}
+  .again:hover{background:#F7F8FA}
+  .again:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+  .foot{text-align:center;font-size:13px;letter-spacing:.06em;color:var(--ink-3);margin:22px 0 0;line-height:1.6}
   .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
   @media (prefers-reduced-motion:reduce){
     *{animation:none!important;transition:none!important}
   }
   @media (max-width:340px){
-    html{font-size:18px}
-    .choices{gap:10px}
+    html{font-size:17px}
+    .choices{gap:9px}
   }
 </style>
 </head>
@@ -183,11 +169,8 @@
 <header class="top">
   <div class="top-in">
     <div class="top-row">
-      <span class="brand">
-        <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="6" width="32" height="24" rx="10" fill="#FFD9A8"/><path d="M13 30l-2 7 9-7z" fill="#FFD9A8"/><circle cx="15" cy="18" r="2.4" fill="#C9601B"/><circle cx="22" cy="18" r="2.4" fill="#C9601B"/><path d="M18 23c1.6 1.6 4 1.6 5.6 0" stroke="#C9601B" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg>
-        카카오톡 OX 퀴즈
-      </span>
-      <span class="count" id="count">1 <small>/ 10</small></span>
+      <span class="brand">카카오톡<i>·</i>OX 퀴즈</span>
+      <span class="count" id="count"><b>1</b> / 20</span>
     </div>
     <div class="bar"><div class="bar-fill" id="barFill"></div></div>
   </div>
@@ -196,50 +179,64 @@
 <div class="wrap">
   <main id="quiz">
     <section class="card" id="card" aria-labelledby="qtext">
-      <div class="illust" id="illust" aria-hidden="true"></div>
-      <span class="tag" id="tag"></span>
+      <div class="card-head">
+        <span class="pict" id="illust" aria-hidden="true"></span>
+        <span class="tag" id="tag"></span>
+        <span class="num" id="num" aria-hidden="true">01</span>
+      </div>
+      <div class="rule"></div>
       <p class="qtext" id="qtext"></p>
-      <div class="choices" role="group" aria-label="정답을 고르세요">
-        <button class="choice o" id="btnO" type="button" aria-label="오, 맞다">
+      <div class="choices" role="group" aria-label="O는 맞다, X는 아니다">
+        <button class="choice o" id="btnO" type="button" aria-label="O, 맞다">
           <span class="glyph" aria-hidden="true">O</span>
+          <span class="cap" aria-hidden="true">맞다</span>
         </button>
-        <button class="choice x" id="btnX" type="button" aria-label="엑스, 아니다">
+        <button class="choice x" id="btnX" type="button" aria-label="X, 아니다">
           <span class="glyph" aria-hidden="true">X</span>
+          <span class="cap" aria-hidden="true">아니다</span>
         </button>
       </div>
     </section>
 
-    <section class="feedback" id="feedback" hidden aria-live="polite">
-      <div class="fb-head">
-        <svg class="icon" id="fbIcon" viewBox="0 0 48 48" aria-hidden="true"></svg>
-        <span id="fbTitle"></span>
+    <section class="fb" id="feedback" hidden aria-live="polite">
+      <div class="fb-top">
+        <span class="badge" id="badge"></span>
+        <span class="fb-note" id="fbNote"></span>
       </div>
-      <p class="fb-right" id="fbRight"></p>
-      <div class="fb-explain" id="fbExplain"></div>
+      <p class="fb-why" id="fbWhy"></p>
       <button class="next" id="nextBtn" type="button">다음 문제</button>
     </section>
   </main>
 
   <section class="result" id="result" hidden aria-live="polite">
     <div class="result-card">
-      <div id="mascot"></div>
-      <h1 class="result-title" id="resultTitle"></h1>
-      <div class="score-line">
-        <div class="score-num"><span id="scoreNum">0</span><span style="font-size:.5em;font-weight:900;color:#5B4A38"> / 10</span></div>
-        <div class="score-sub" id="scoreSub"></div>
+      <span class="res-label">결과</span>
+      <h1 class="res-title" id="resultTitle">수고하셨습니다</h1>
+      <p class="res-sub" id="resultSub"></p>
+      <div class="score">
+        <span class="score-num" id="scoreNum">0</span>
+        <span class="score-den" id="scoreDen">/ 20 문제 정답</span>
       </div>
-      <span class="stamp" id="stamp"></span>
-      <p class="msg" id="msg"></p>
-      <div class="review">
-        <h2>오늘의 카카오톡 3가지</h2>
-        <ul>
-          <li>노란 전송 버튼을 <b>길게 꾹</b> — 조용히 보내기 · 스포 방지 · 메시지 예약</li>
-          <li>보낸 메시지는 <b>24시간 안에</b> 고칠 수 있어요 (길게 눌러 수정)</li>
-          <li>중요한 비밀번호는 <b>스포 방지</b>로 가려서 보내세요</li>
+      <p class="res-msg" id="msg"></p>
+
+      <div class="block">
+        <h2>오늘 바로 써먹을 핵심 기능</h2>
+        <ul class="kf">
+          <li><span class="i">01</span><span>전송 버튼을 <b>길게 꾹</b> — 조용히 보내기 · 스포 방지 · 메시지 예약</span></li>
+          <li><span class="i">02</span><span>예약 메시지는 <b>카카오톡 서버</b>가 전송 — 휴대폰이 꺼져 있어도 도착</span></li>
+          <li><span class="i">03</span><span>스포 방지는 채팅방을 <b>나갔다 다시 들어오면</b> 다시 가려짐</span></li>
+          <li><span class="i">04</span><span>보낸 메시지는 <b>24시간 이내</b> 수정 — 옆에 '수정됨'만 표시</span></li>
+          <li><span class="i">05</span><span>친구 숨김은 <b>목록 정리</b>, 수신 차단은 '차단'</span></li>
         </ul>
       </div>
+
+      <div class="block" id="wrongBlock" hidden>
+        <h2>다시 볼 문제</h2>
+        <ol class="wrongs" id="wrongList"></ol>
+      </div>
+
       <button class="again" id="againBtn" type="button">처음부터 다시 풀기</button>
-      <p class="foot">어르신 스마트폰 교실 · 카카오톡 OX 퀴즈</p>
+      <p class="foot">카카오톡 활용 점검 · OX 퀴즈 20문항</p>
     </div>
   </section>
 </div>
@@ -248,192 +245,125 @@
 (function(){
   "use strict";
 
-  var C = {
-    bg:"#FFF1DC", line:"#8A5A2B", orange:"#EF7C2A", orangeL:"#FFC98F",
-    green:"#2E8B57", red:"#D4554A", blue:"#4E86C9", white:"#FFFFFF", ink:"#2B2118"
-  };
+  /* ── 선 아이콘 (48 격자, 획 1.6) ─────────────────────────── */
+  var S1 = 'stroke="#16233A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"';
+  var S2 = 'stroke="#0E6B52" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"';
 
-  function svg(inner){
-    return '<svg viewBox="0 0 120 120" role="presentation">'+
-      '<circle cx="60" cy="60" r="56" fill="'+C.bg+'"/>'+ inner +'</svg>';
-  }
+  function ic(inner){ return '<svg viewBox="0 0 48 48" aria-hidden="true">'+inner+'</svg>'; }
 
-  /* --- illustration set (inline SVG, no external files) --- */
   var ART = {
-    /* 1. 전송 버튼을 길게 누르면 세 가지 메뉴 */
-    menu: svg(
-      '<rect x="24" y="28" width="72" height="58" rx="16" fill="'+C.white+'" stroke="'+C.line+'" stroke-width="4"/>'+
-      '<path d="M44 86l-3 14 16-14z" fill="'+C.white+'" stroke="'+C.line+'" stroke-width="4" stroke-linejoin="round"/>'+
-      '<circle cx="40" cy="45" r="5" fill="'+C.orange+'"/><rect x="52" y="41" width="30" height="8" rx="4" fill="'+C.orangeL+'"/>'+
-      '<circle cx="40" cy="60" r="5" fill="'+C.green+'"/><rect x="52" y="56" width="30" height="8" rx="4" fill="#BFE3CD"/>'+
-      '<circle cx="40" cy="75" r="5" fill="'+C.blue+'"/><rect x="52" y="71" width="30" height="8" rx="4" fill="#C6DCF3"/>'
-    ),
-    /* 2. 조용히 보내기 : 종 + 빗금 */
-    bell: svg(
-      '<path d="M60 26c-11 0-19 9-19 20v14l-7 12h52l-7-12V46c0-11-8-20-19-20z" fill="'+C.white+'" stroke="'+C.line+'" stroke-width="4" stroke-linejoin="round"/>'+
-      '<path d="M52 82a8 8 0 0016 0" fill="'+C.white+'" stroke="'+C.line+'" stroke-width="4" stroke-linecap="round"/>'+
-      '<circle cx="60" cy="22" r="4" fill="'+C.line+'"/>'+
-      '<path d="M30 92L92 30" stroke="'+C.red+'" stroke-width="9" stroke-linecap="round"/>'+
-      '<path d="M30 92L92 30" stroke="'+C.white+'" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 8"/>'
-    ),
-    /* 3. 예약 메시지 : 시계 + 종이비행기 */
-    clock: svg(
-      '<circle cx="54" cy="62" r="30" fill="'+C.white+'" stroke="'+C.line+'" stroke-width="4"/>'+
-      '<path d="M54 46v17l12 8" stroke="'+C.orange+'" stroke-width="5" stroke-linecap="round" fill="none"/>'+
-      '<circle cx="54" cy="62" r="3.5" fill="'+C.line+'"/>'+
-      '<path d="M84 24l20-8-6 20-7-5z" fill="'+C.green+'"/>'+
-      '<path d="M84 24l14 12" stroke="'+C.green+'" stroke-width="3" stroke-linecap="round"/>'
-    ),
-    /* 4. 데이터·배터리 부담 없음 */
-    battery: svg(
-      '<rect x="22" y="40" width="66" height="40" rx="10" fill="'+C.white+'" stroke="'+C.line+'" stroke-width="4"/>'+
-      '<rect x="90" y="52" width="9" height="16" rx="4" fill="'+C.line+'"/>'+
-      '<rect x="30" y="48" width="26" height="24" rx="6" fill="#BFE3CD"/>'+
-      '<path d="M43 52l-6 11h7l-3 9 9-12h-7z" fill="'+C.green+'"/>'+
-      '<circle cx="76" cy="60" r="13" fill="'+C.green+'"/>'+
-      '<path d="M70 60l4 4 8-9" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'
-    ),
-    /* 5. 스포 방지 : 가려진 메시지 + 손가락 터치 */
-    blur: svg(
-      '<rect x="20" y="26" width="80" height="56" rx="16" fill="'+C.white+'" stroke="'+C.line+'" stroke-width="4"/>'+
-      '<path d="M32 44h56M32 56h56M32 68h34" stroke="#E3CDB4" stroke-width="7" stroke-linecap="round"/>'+
-      '<circle cx="82" cy="72" r="17" fill="'+C.orange+'" opacity=".18"/>'+
-      '<circle cx="82" cy="72" r="10" fill="'+C.white+'" stroke="'+C.orange+'" stroke-width="4"/>'+
-      '<path d="M82 62v-6" stroke="'+C.orange+'" stroke-width="4" stroke-linecap="round"/>'
-    ),
-    /* 6. 다시 들어오면 다시 가려짐 : 눈 + 빗금 */
-    eyeoff: svg(
-      '<path d="M22 60c12-17 26-25 38-25s26 8 38 25c-12 17-26 25-38 25S34 77 22 60z" fill="'+C.white+'" stroke="'+C.line+'" stroke-width="4" stroke-linejoin="round"/>'+
-      '<circle cx="60" cy="60" r="11" fill="'+C.blue+'"/>'+
-      '<path d="M30 92L90 30" stroke="'+C.red+'" stroke-width="9" stroke-linecap="round"/>'+
-      '<path d="M30 92L90 30" stroke="'+C.white+'" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 8"/>'
-    ),
-    /* 7. 보낸 메시지 수정 : 연필 */
-    pencil: svg(
-      '<rect x="20" y="30" width="62" height="46" rx="14" fill="'+C.white+'" stroke="'+C.line+'" stroke-width="4"/>'+
-      '<path d="M32 52h26M32 63h16" stroke="#E3CDB4" stroke-width="6" stroke-linecap="round"/>'+
-      '<path d="M96 34l-8-8-26 26-2 12 12-2z" fill="'+C.orange+'" stroke="'+C.line+'" stroke-width="3" stroke-linejoin="round"/>'+
-      '<path d="M85 31l7 7" stroke="'+C.white+'" stroke-width="3" stroke-linecap="round"/>'
-    ),
-    /* 8. 조용히 나가기 : 문 + 발자국 */
-    door: svg(
-      '<rect x="30" y="22" width="44" height="76" rx="8" fill="'+C.white+'" stroke="'+C.line+'" stroke-width="4"/>'+
-      '<circle cx="64" cy="62" r="4" fill="'+C.orange+'"/>'+
-      '<path d="M80 60h22" stroke="'+C.orange+'" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 9"/>'+
-      '<path d="M98 50l9 10-9 10" fill="none" stroke="'+C.orange+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'+
-      '<circle cx="89" cy="46" r="6" fill="#BFE3CD"/><circle cx="104" cy="58" r="4.5" fill="#BFE3CD"/>'
-    ),
-    /* 9. 숨김과 차단은 다름 : 사람 + 빗금 + 편지 */
-    person: svg(
-      '<circle cx="48" cy="42" r="17" fill="'+C.white+'" stroke="'+C.line+'" stroke-width="4"/>'+
-      '<path d="M22 96c0-15 12-25 26-25s26 10 26 25" fill="'+C.white+'" stroke="'+C.line+'" stroke-width="4" stroke-linecap="round"/>'+
-      '<path d="M18 92L78 30" stroke="'+C.red+'" stroke-width="9" stroke-linecap="round"/>'+
-      '<path d="M18 92L78 30" stroke="'+C.white+'" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 8"/>'+
-      '<rect x="70" y="66" width="36" height="26" rx="7" fill="'+C.orangeL+'" stroke="'+C.line+'" stroke-width="3"/>'+
-      '<path d="M71 68l17 13 17-13" fill="none" stroke="'+C.line+'" stroke-width="3" stroke-linejoin="round"/>'
-    ),
-    /* 10. 홈 화면 아이콘 길게 : 폰 + 파동 */
-    phone: svg(
-      '<rect x="34" y="18" width="52" height="84" rx="12" fill="'+C.white+'" stroke="'+C.line+'" stroke-width="4"/>'+
-      '<rect x="42" y="30" width="10" height="10" rx="3" fill="'+C.green+'"/>'+
-      '<rect x="56" y="30" width="10" height="10" rx="3" fill="'+C.orange+'"/>'+
-      '<rect x="70" y="30" width="10" height="10" rx="3" fill="'+C.blue+'"/>'+
-      '<rect x="42" y="46" width="10" height="10" rx="3" fill="'+C.orangeL+'"/>'+
-      '<rect x="56" y="46" width="10" height="10" rx="3" fill="#BFE3CD"/>'+
-      '<rect x="70" y="46" width="10" height="10" rx="3" fill="#C6DCF3"/>'+
-      '<circle cx="60" cy="86" r="7" fill="'+C.orange+'" opacity=".9"/>'+
-      '<circle cx="60" cy="86" r="14" fill="none" stroke="'+C.orange+'" stroke-width="3" opacity=".55"/>'+
-      '<circle cx="60" cy="86" r="21" fill="none" stroke="'+C.orange+'" stroke-width="2.5" opacity=".3"/>'
-    )
+    /* 전송 버튼 길게 → 세 가지 메뉴 */
+    send: ic('<rect x="15" y="6" width="18" height="36" rx="4" '+S1+'/><path d="M21 15h6M21 21h6M21 27h6" '+S2+'/><circle cx="24" cy="36" r="2" fill="#16233A"/>'),
+    /* 조용히 보내기 : 종 + 빗금 */
+    bell: ic('<path d="M16 30h16l-2.4-4.6v-5.2a5.6 5.6 0 0 0-11.2 0v5.2z" '+S1+'/><path d="M21 33.4a3 3 0 0 0 6 0" '+S1+'/><path d="M13 12l22 24" '+S2+'/>'),
+    /* 짧게 vs 길게 : 겹친 링 */
+    press: ic('<circle cx="24" cy="24" r="4" '+S2+'/><circle cx="24" cy="24" r="10" '+S1+' stroke-dasharray="3 4"/><circle cx="24" cy="24" r="16" '+S1+' opacity=".45"/><path d="M36 12h-5M36 12v5" '+S1+'/>'),
+    /* 사진도 조용히 : 사진 프레임 */
+    photo: ic('<rect x="8" y="12" width="32" height="24" rx="3.5" '+S1+'/><circle cx="17" cy="21" r="2.6" '+S2+'/><path d="M12 34l8.5-9.5 6 6 4-4 5.5 7.5" '+S1+'/>'),
+    /* 데이터·배터리 : 배터리 */
+    battery: ic('<rect x="9" y="19" width="27" height="15" rx="3.5" '+S1+'/><path d="M39 24v5" '+S1+'/><path d="M13 24v5M18 24v5M23 24v5" '+S2+'/>'),
+    /* 예약 전송 : 시계 + 체크 */
+    clockOk: ic('<circle cx="20" cy="22" r="11.5" '+S1+'/><path d="M20 15.5v7l4.5 2.8" '+S1+'/><path d="M31 35l4.5 4.5L44 30" '+S2+'/>'),
+    /* 예약 취소 : 시계 + 엑스 */
+    clockNo: ic('<circle cx="20" cy="22" r="11.5" '+S1+'/><path d="M20 15.5v7l4.5 2.8" '+S1+'/><path d="M32 31l9 9M41 31l-9 9" '+S2+'/>'),
+    /* 수정 : 말풍선 + 연필 */
+    edit: ic('<path d="M8 13.5h22.5a3.5 3.5 0 0 1 3.5 3.5v11a3.5 3.5 0 0 1-3.5 3.5H18l-7 6v-6H8a3.5 3.5 0 0 1-3.5-3.5V17A3.5 3.5 0 0 1 8 13.5z" '+S1+'/><path d="M28 33.5l3-9 7.5 6.5-6 6-4.5 1z" '+S2+'/>'),
+    /* 스포 방지 : 가려진 말풍선 + 터치 */
+    spoiler: ic('<rect x="7" y="12" width="34" height="22" rx="5.5" '+S1+'/><path d="M13 20h13M13 26h9" '+S1+' stroke-dasharray="2.5 3.5"/><circle cx="34" cy="31" r="6" '+S2+'/><circle cx="34" cy="31" r="1.8" fill="#0E6B52"/>'),
+    /* 다시 가려짐 : 눈 + 빗금 */
+    eyeOff: ic('<path d="M7 24c4.6-6.6 10.4-9.9 17-9.9S36.4 17.4 41 24c-4.6 6.6-10.4 9.9-17 9.9S11.6 30.6 7 24z" '+S1+'/><circle cx="24" cy="24" r="4.6" '+S1+'/><path d="M12 37l24-26" '+S2+'/>'),
+    /* 24시간 : 시계 (12시 방향 강조) */
+    hour: ic('<circle cx="24" cy="24" r="14" '+S1+'/><path d="M24 15v9.6l6.4 4" '+S1+'/><path d="M24 8.5v2.4M39.5 24h-2.4M24 39.5v-2.4M8.5 24h2.4" '+S2+'/>'),
+    /* 조용히 나가기 : 문 + 나가는 화살 */
+    door: ic('<path d="M9 41V9h15v32" '+S1+'/><path d="M9 41h30" '+S1+'/><path d="M20 25h17" '+S2+'/><path d="M32 20l5 5-5 5" '+S2+'/>'),
+    /* 입력창 잠금 : 자물쇠 */
+    lock: ic('<rect x="14" y="22" width="20" height="16" rx="3.5" '+S1+'/><path d="M19 22v-4.5a5 5 0 0 1 10 0V22" '+S1+'/><circle cx="24" cy="30" r="2" '+S2+'/>'),
+    /* 입력 중 상태 : 말풍선 + 점 + 빗금 */
+    typingOff: ic('<path d="M9 12h30a3.5 3.5 0 0 1 3.5 3.5v12A3.5 3.5 0 0 1 39 31H22l-7 6v-6H9a3.5 3.5 0 0 1-3.5-3.5v-12A3.5 3.5 0 0 1 9 12z" '+S1+'/><circle cx="17" cy="22" r="1.9" fill="#16233A"/><circle cx="24" cy="22" r="1.9" fill="#16233A"/><circle cx="31" cy="22" r="1.9" fill="#16233A"/><path d="M12 40l26-28" '+S2+'/>'),
+    /* 친구 숨김 : 사람 + 체크 */
+    personOk: ic('<circle cx="19" cy="17" r="6.5" '+S1+'/><path d="M7 38c0-6.6 5.4-11 12-11 3 0 5.6.9 7.6 2.5" '+S1+'/><path d="M30 34l4.5 4.5L44 29" '+S2+'/>'),
+    /* 친구 숨김 (오해) : 사람 + 봉투 */
+    personMail: ic('<circle cx="16" cy="16" r="6" '+S1+'/><path d="M5 36c0-6 4.9-9.6 11-9.6 2.6 0 5 .6 6.9 1.9" '+S1+'/><rect x="27" y="27" width="16" height="12" rx="2" '+S2+'/><path d="M27.5 28l7.5 5.5 7.5-5.5" '+S2+'/>'),
+    /* 홈 화면 아이콘 길게 : 앱 그리드 */
+    grid: ic('<rect x="8" y="8" width="12" height="12" rx="3" '+S1+'/><rect x="26" y="8" width="12" height="12" rx="3" '+S1+'/><rect x="8" y="26" width="12" height="12" rx="3" '+S1+'/><rect x="26" y="26" width="12" height="12" rx="3" '+S2+'/><circle cx="24" cy="24" r="20" '+S1+' opacity=".28"/>'),
+    /* 서식 : A + 취소선 */
+    format: ic('<path d="M15 34l9-20 9 20" '+S1+'/><path d="M19.4 27h9.2" '+S1+'/><path d="M9 24h30" '+S2+'/>'),
+    /* 연속 캡처 : 겹친 프레임 */
+    capture: ic('<rect x="8" y="10" width="22" height="22" rx="3.5" '+S1+'/><rect x="18" y="18" width="22" height="22" rx="3.5" '+S2+'/>'),
+    /* 캡처 저장 : 아래 화살표 + 트레이 */
+    download: ic('<path d="M24 8v17" '+S2+'/><path d="M17 18.5l7 7 7-7" '+S2+'/><path d="M9 32v4.5A3.5 3.5 0 0 0 12.5 40h23a3.5 3.5 0 0 0 3.5-3.5V32" '+S1+'/>')
   };
 
-  var MASCOT =
-    '<svg class="mascot" viewBox="0 0 200 190" role="presentation">'+
-      '<circle cx="100" cy="96" r="92" fill="#FFF1DC"/>'+
-      '<rect x="30" y="40" width="140" height="104" rx="40" fill="#FFD9A8" stroke="#8A5A2B" stroke-width="5"/>'+
-      '<path d="M70 142l-8 30 34-28z" fill="#FFD9A8" stroke="#8A5A2B" stroke-width="5" stroke-linejoin="round"/>'+
-      '<circle cx="76" cy="84" r="7" fill="#2B2118"/>'+
-      '<circle cx="124" cy="84" r="7" fill="#2B2118"/>'+
-      '<path d="M78 108c12 13 32 13 44 0" stroke="#2B2118" stroke-width="6" stroke-linecap="round" fill="none"/>'+
-      '<circle cx="56" cy="102" r="9" fill="#F0A0A0" opacity=".55"/>'+
-      '<circle cx="144" cy="102" r="9" fill="#F0A0A0" opacity=".55"/>'+
-      '<path d="M22 30l10 6M180 34l-9 7M100 12v-8" stroke="#EF7C2A" stroke-width="5" stroke-linecap="round"/>'+
-      '<circle cx="38" cy="14" r="5" fill="#4E86C9"/>'+
-      '<circle cx="166" cy="16" r="4.5" fill="#2E8B57"/>'+
-      '<circle cx="12" cy="66" r="4" fill="#EF7C2A"/>'+
-      '<circle cx="190" cy="72" r="4" fill="#EF7C2A"/>'+
-      '<path d="M100 168l6 12 12 6-12 6-6 12-6-12-12-6 12-6z" fill="#2E8B57" opacity=".8"/>'+
-    '</svg>';
-
-  /* 문항: 노트북LM '카카오톡 플래시카드'(50장) 중 핵심 10문항, 화면에서 확인한 내용 그대로 */
+  /* ── 문항 20개 ─────────────────────────────────────────────
+     출처: notes/2026-11-20_노트북LM_OX_원본_flashcards.csv (O/X 카드 22장)
+     20문항 선별 — 카드 46, 1, 42, 3, 6, 5, 9, 15, 12, 13, 43, 18, 20, 28, 50, 34, 36, 40, 22, 48
+     (카드 45 입력창 잠금 유지, 카드 32 조용한 채팅방 숨기기는 20문항에서 제외)
+     질문·정답·해설은 CSV 원본과 일치하는 사실만 사용 */
   var QUESTIONS = [
-    {
-      art:"menu", answer:"O",
+    { tag:"전송 버튼", art:"send", answer:"O",
       q:"카카오톡 전송 버튼을 길게 꾹 누르면 나타나는 대표 숨은 기능 3가지는 '조용히 보내기', '스포 방지', '메시지 예약'이다.",
-      right:"정답은 O 예요. 세 가지가 모두 맞습니다.",
-      why:"노란 전송 버튼을 <b>길게 꾹</b> 누르면 이 세 가지 메뉴가 한눈에 나타납니다. 짧게 '톡' 누르면 그냥 보통 메시지로 전송돼요."
-    },
-    {
-      art:"bell", answer:"O",
+      why:"노란색 전송 버튼을 길게 꾹 누르면 이 세 가지 메뉴가 한눈에 나타납니다." },
+    { tag:"전송 버튼", art:"bell", answer:"O",
       q:"카카오톡 '조용히 보내기' 기능을 사용하면 상대방 휴대폰에 알림 소리와 진동이 울리지 않는다.",
-      right:"정답은 O 예요. 소리와 진동이 울리지 않습니다.",
-      why:"메시지만 조용히 전달됩니다. 늦은 밤이나 조용해야 할 때 보내기 좋아요. 사진이나 동영상도 같은 방법으로 보낼 수 있습니다."
-    },
-    {
-      art:"clock", answer:"O",
-      q:"카카오톡 메시지 예약을 설정해 두면 스마트폰 전원을 꺼두어도 지정된 시간에 정상 전송된다.",
-      right:"정답은 O 예요. 휴대폰이 꺼져 있어도 전송됩니다.",
-      why:"카카오톡 서버에서 전송하기 때문에, 휴대폰이 꺼져 있거나 주무시는 중이어도 약속한 시간에 메시지가 도착합니다."
-    },
-    {
-      art:"battery", answer:"X",
+      why:"메시지만 조용히 전달되며, 상대방 휴대폰에 알림 소리나 진동이 울리지 않습니다." },
+    { tag:"전송 버튼", art:"press", answer:"O",
+      q:"카카오톡 전송 버튼을 짧게 '톡' 누르면 '스포 방지'나 '조용히 보내기' 옵션이 적용되지 않는다.",
+      why:"습관처럼 짧게 톡 누르면 일반 메시지로 전송됩니다. 숨은 메뉴는 반드시 길게 꾹 눌러야 나타납니다." },
+    { tag:"전송 버튼", art:"photo", answer:"O",
+      q:"'조용히 보내기' 기능은 글자 메시지뿐만 아니라 사진이나 동영상을 보낼 때도 사용할 수 있다.",
+      why:"사진이나 동영상을 선택한 뒤 전송 버튼을 길게 꾹 누르면 동일하게 사용할 수 있습니다." },
+    { tag:"예약", art:"battery", answer:"X",
       q:"카카오톡 메시지 예약 기능을 이용하면 추가 데이터가 소모되거나 배터리가 빠르게 줄어든다.",
-      right:"정답은 X 예요. 데이터도 배터리도 그대로입니다.",
-      why:"예약 메시지를 써도 데이터가 더 들지 않고 배터리도 빨리 닳지 않습니다. 안심하고 쓰셔도 됩니다."
-    },
-    {
-      art:"blur", answer:"O",
-      q:"'스포 방지'로 가려진 메시지는 받은 사람이 손가락으로 직접 터치해야만 내용이 보인다.",
-      right:"정답은 O 예요. 받는 분이 직접 눌러야 보입니다.",
-      why:"계좌번호나 현관 비밀번호처럼 중요한 내용은 <b>스포 방지</b>로 뿌옇게 가려서 보내세요. 받는 분이 손으로 눌러야만 글자가 보입니다."
-    },
-    {
-      art:"eyeoff", answer:"X",
-      q:"'스포 방지' 메시지는 한 번 터치하여 내용을 확인한 후 채팅방을 나갔다 다시 들어와도 텍스트가 계속 보인다.",
-      right:"정답은 X 예요. 다시 들어오면 또 가려집니다.",
-      why:"한 번 눌러 봤더라도 채팅방을 나갔다 다시 들어오면 메시지가 다시 뿌옇게 가려집니다. 그래서 옆 사람에게 쉽게 보이지 않아요."
-    },
-    {
-      art:"pencil", answer:"X",
+      why:"데이터가 더 들거나 배터리가 소모되는 일이 없으므로 안심하고 사용하셔도 됩니다." },
+    { tag:"예약", art:"clockOk", answer:"O",
+      q:"카카오톡 메시지 예약을 설정해 두면 스마트폰 전원을 꺼두어도 지정된 시간에 정상 전송된다.",
+      why:"서버에서 전송 처리가 되므로 휴대폰을 꺼두거나 잠들어 있어도 지정한 시간에 전송됩니다." },
+    { tag:"예약", art:"clockNo", answer:"O",
+      q:"전송 대기 중인 카카오톡 예약 메시지를 취소하려면 예약 목록에서 해당 메시지의 점 세 개(⋮)를 누른 뒤 '삭제'를 선택하면 된다.",
+      why:"'삭제'를 누르면 전송되기 전 예약된 메시지가 취소되어 삭제됩니다." },
+    { tag:"수정", art:"edit", answer:"X",
       q:"이미 보낸 카카오톡 메시지를 수정하면 '삭제된 메시지입니다'라는 문구가 화면에 남는다.",
-      right:"정답은 X 예요. '수정됨'이라고만 작게 표시됩니다.",
-      why:"말풍선을 길게 눌러 <b>수정</b>하면, '삭제된 메시지입니다' 대신 메시지 옆에 '수정됨'이라는 작은 글씨만 붙습니다. 보낸 지 24시간 안에는 고칠 수 있어요."
-    },
-    {
-      art:"door", answer:"O",
+      why:"삭제 문구 대신 메시지 옆에 '수정됨'이라는 작은 글씨만 추가되며, 텍스트는 깔끔하게 바뀝니다." },
+    { tag:"스포 방지", art:"spoiler", answer:"O",
+      q:"'스포 방지'로 가려진 메시지는 받은 사람이 손가락으로 직접 터치해야만 내용이 보인다.",
+      why:"수신자가 직접 손가락으로 터치해야 가림이 해제되고 텍스트가 표시됩니다. 계좌번호나 현관 비밀번호처럼 중요한 내용을 보낼 때 쓰는 기능입니다." },
+    { tag:"스포 방지", art:"eyeOff", answer:"X",
+      q:"'스포 방지' 메시지는 한 번 터치하여 내용을 확인한 후 채팅방을 나갔다 다시 들어와도 텍스트가 계속 보인다.",
+      why:"채팅방을 나갔다 다시 들어오면 메시지가 다시 뿌옇게 가려집니다." },
+    { tag:"수정", art:"hour", answer:"O",
+      q:"카카오톡에서 보낸 메시지를 수정한 경우 상대방이 대화 내용을 읽은 후에도 전송 24시간 이내라면 수정이 가능하다.",
+      why:"상대방의 읽음 여부와 무관하게, 메시지를 보낸 시간 기준 24시간 이내에는 언제든 수정할 수 있습니다." },
+    { tag:"단톡방", art:"door", answer:"O",
       q:"'조용히 나가기'를 켜고 단톡방을 나가면 해당 채팅방 대화창에 아무런 흔적이 남지 않는다.",
-      right:"정답은 O 예요. 나갔다는 문구가 남지 않습니다.",
-      why:"'홍길동님이 나갔습니다' 같은 문구가 뜨지 않습니다. 나가기 확인창에서 <b>'조용히 나가기'</b> 앞 동그라미를 눌러 체크하고 나가시면 됩니다."
-    },
-    {
-      art:"person", answer:"X",
-      q:"카카오톡 친구 목록에서 특정 친구를 '숨기기'하면 해당 친구가 나에게 보낸 메시지를 더 이상 받을 수 없다.",
-      right:"정답은 X 예요. 메시지는 그대로 옵니다.",
-      why:"숨기기는 내 친구 목록에서만 안 보이게 하는 것입니다. 상대방 메시지는 정상적으로 옵니다. 메시지를 받기 싫으시면 <b>'차단'</b>을 해야 합니다."
-    },
-    {
-      art:"phone", answer:"O",
+      why:"퇴장 문구가 뜨지 않으며, 나 혼자만 조용히 방을 빠져나오게 됩니다." },
+    { tag:"입력창", art:"lock", answer:"O",
+      q:"'입력창 잠금'이 켜진 대화방에서는 오른쪽에 위치한 '잠금 해제' 버튼을 눌러야 메시지를 작성할 수 있다.",
+      why:"'잠금 해제'를 한 번 눌러서 풀어야 글씨를 입력할 수 있는 상태가 됩니다." },
+    { tag:"알림", art:"typingOff", answer:"O",
+      q:"설정에서 '메시지 입력 중 상태보기'를 끄면 내가 대답을 입력하고 있는 상태가 상대방에게 실시간으로 노출되지 않는다.",
+      why:"상대방 화면에 입력 중 상태가 표시되는 것을 막을 수 있습니다." },
+    { tag:"친구", art:"personOk", answer:"O",
+      q:"친구 차단 대신 '숨김'을 사용하면 상대방을 친구 리스트에서 안 보이게 정리할 수 있다.",
+      why:"친구 차단과 달리 나중에 언제든 숨김 해제를 통해 친구 목록으로 복원할 수 있어 리스트 정리에 유용합니다." },
+    { tag:"홈 화면", art:"grid", answer:"O",
       q:"스마트폰 홈 화면에서 문자 메시지 앱이나 카메라 앱을 길게 꾹 누르면 바로가기 메뉴가 표시된다.",
-      right:"정답은 O 예요. 바로가기 메뉴가 나옵니다.",
-      why:"카메라 앱을 길게 누르면 셀카·문서 스캔, 문자 앱은 자주 쓰는 대화방 바로가기가 나옵니다. 카카오톡 아이콘도 길게 누르면 자주 대화하는 방으로 바로 들어갈 수 있어요."
-    }
+      why:"셀카 촬영, 문서 스캔, 특정 문자 대화방 이동 등 주요 기능 바로가기가 똑같이 표시됩니다." },
+    { tag:"메시지 서식", art:"format", answer:"O",
+      q:"카카오톡 입력창에서 작성 중인 글자에 취소선(글자 가운데 줄)이나 기울임 서식을 적용할 수 있다.",
+      why:"글자를 블록 선택한 후 더보기(⋮) 메뉴에서 취소선이나 기울임을 선택하여 적용할 수 있습니다." },
+    { tag:"캡처", art:"capture", answer:"O",
+      q:"카카오톡 대화 캡처 기능을 사용할 때 여러 개의 메시지를 연달아 터치해 길게 한 번에 캡처할 수 있다.",
+      why:"시작 메시지와 끝 메시지를 선택해 여러 대화 내용을 연속으로 캡처할 수 있습니다." },
+    { tag:"친구", art:"personMail", answer:"X",
+      q:"카카오톡 친구 목록에서 특정 친구를 '숨기기'하면 해당 친구가 나에게 보낸 메시지를 더 이상 받을 수 없다.",
+      why:"친구 숨김은 목록에서만 안 보이게 하는 것이며, 상대방 메시지는 정상적으로 수신됩니다. 수신을 차단하려면 '차단'을 해야 합니다." },
+    { tag:"캡처", art:"download", answer:"O",
+      q:"대화방 캡처 시 아래쪽을 향한 화살표 버튼을 누르면 해당 캡처본이 스마트폰 갤러리에 저장된다.",
+      why:"하단의 다운로드 화살표 아이콘을 터치하면 내 휴대폰 갤러리로 이미지 파일이 즉시 저장됩니다." }
   ];
 
   var TOTAL = QUESTIONS.length;
-  var idx = 0;
-  var score = 0;
-  var locked = false;
-  var picked = [];   // {ok:boolean, q:string}
+  var idx = 0, score = 0, locked = false, picked = [];
 
   var el = {
     count: document.getElementById('count'),
@@ -441,54 +371,55 @@
     card: document.getElementById('card'),
     illust: document.getElementById('illust'),
     tag: document.getElementById('tag'),
+    num: document.getElementById('num'),
     qtext: document.getElementById('qtext'),
     btnO: document.getElementById('btnO'),
     btnX: document.getElementById('btnX'),
     feedback: document.getElementById('feedback'),
-    fbIcon: document.getElementById('fbIcon'),
-    fbTitle: document.getElementById('fbTitle'),
-    fbRight: document.getElementById('fbRight'),
-    fbExplain: document.getElementById('fbExplain'),
+    badge: document.getElementById('badge'),
+    note: document.getElementById('fbNote'),
+    why: document.getElementById('fbWhy'),
     next: document.getElementById('nextBtn'),
     quiz: document.getElementById('quiz'),
     result: document.getElementById('result'),
-    mascot: document.getElementById('mascot'),
     resultTitle: document.getElementById('resultTitle'),
+    resultSub: document.getElementById('resultSub'),
     scoreNum: document.getElementById('scoreNum'),
-    scoreSub: document.getElementById('scoreSub'),
-    stamp: document.getElementById('stamp'),
+    scoreDen: document.getElementById('scoreDen'),
     msg: document.getElementById('msg'),
+    wrongBlock: document.getElementById('wrongBlock'),
+    wrongList: document.getElementById('wrongList'),
     again: document.getElementById('againBtn')
   };
 
-  var ICON_OK = '<circle cx="24" cy="24" r="21" fill="#E9F6EF" stroke="#8FD0AC" stroke-width="3"/><path d="M14 25l7 7 14-16" stroke="#2E8B57" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>';
-  var ICON_NO = '<circle cx="24" cy="24" r="21" fill="#FDECE9" stroke="#F1B5AD" stroke-width="3"/><path d="M17 17l14 14M31 17L17 31" stroke="#B93B31" stroke-width="6" stroke-linecap="round"/>';
+  var ICON_OK = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.4l3.2 3.2L13 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var ICON_NO = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
 
   function setProgress(){
-    var shown = Math.min(idx + 1, TOTAL);
-    el.count.innerHTML = shown + ' <small>/ ' + TOTAL + '</small>';
-    var pct = (idx / TOTAL) * 100;
-    el.bar.style.width = Math.max(pct, 4) + '%';
-    el.bar.classList.toggle('done', idx >= TOTAL);
+    el.count.innerHTML = '<b>' + Math.min(idx + 1, TOTAL) + '</b> / ' + TOTAL;
+    el.bar.style.width = Math.max((idx / TOTAL) * 100, 2) + '%';
   }
 
   function render(){
     var q = QUESTIONS[idx];
     el.illust.innerHTML = ART[q.art] || '';
-    el.tag.textContent = '문제 ' + (idx + 1);
+    el.tag.textContent = q.tag;
+    el.num.textContent = pad(idx + 1);
     el.qtext.textContent = q.q;
     el.btnO.className = 'choice o';
     el.btnX.className = 'choice x';
     el.btnO.disabled = false;
     el.btnX.disabled = false;
     el.feedback.hidden = true;
-    el.feedback.className = 'feedback';
+    el.feedback.className = 'fb';
     el.card.style.animation = 'none';
     void el.card.offsetWidth;
     el.card.style.animation = '';
-    setProgress();
     el.next.textContent = (idx === TOTAL - 1) ? '결과 보기' : '다음 문제';
     locked = false;
+    setProgress();
     window.scrollTo({top:0, behavior:'smooth'});
   }
 
@@ -496,31 +427,29 @@
     if (locked) return;
     locked = true;
     var q = QUESTIONS[idx];
-    var ok = pick === q.answer;
+    var ok = (pick === q.answer);
     if (ok) score++;
-    picked[idx] = {ok:ok, q:q.q};
+    picked[idx] = { ok:ok, q:q.q, answer:q.answer };
+
+    var btnPick  = (pick === 'O') ? el.btnO : el.btnX;
+    var btnRight = (q.answer === 'O') ? el.btnO : el.btnX;
+    var btnOther = (q.answer === 'O') ? el.btnX : el.btnO;
 
     el.btnO.disabled = true;
     el.btnX.disabled = true;
-    var btnPick = pick === 'O' ? el.btnO : el.btnX;
-    var btnRight = q.answer === 'O' ? el.btnO : el.btnX;
     btnRight.classList.add('correct');
+    btnOther.classList.add('dim');
     if (!ok) btnPick.classList.add('wrong');
-    if (ok) btnPick.classList.add('correct');
-    var other = q.answer === 'O' ? el.btnX : el.btnO;
-    other.classList.add('dim');
-    if (ok) { btnPick.classList.remove('dim'); }
-    else { btnRight.classList.remove('dim'); }
 
     el.feedback.hidden = false;
-    el.feedback.className = 'feedback' + (ok ? '' : ' bad');
-    el.fbIcon.innerHTML = ok ? ICON_OK : ICON_NO;
-    el.fbTitle.textContent = ok ? '딱 맞혔어요!' : '아쉬워요, 거의 다 왔어요';
-    el.fbRight.textContent = q.right;
-    el.fbExplain.innerHTML = q.why;
+    el.feedback.className = 'fb' + (ok ? '' : ' bad');
+    el.badge.innerHTML = (ok ? ICON_OK : ICON_NO) + '정답 ' + q.answer;
+    el.note.textContent = ok ? '맞히셨습니다' : '해설을 확인해 보십시오';
+    el.why.textContent = q.why;
+
     idx++;
     el.bar.style.width = (idx / TOTAL) * 100 + '%';
-    if (navigator.vibrate) { try { navigator.vibrate(ok ? 24 : [18,60,18]); } catch(e){} }
+    if (navigator.vibrate){ try{ navigator.vibrate(ok ? 20 : [14, 50, 14]); }catch(e){} }
     setTimeout(function(){
       el.feedback.scrollIntoView({behavior:'smooth', block:'nearest'});
     }, 120);
@@ -529,52 +458,67 @@
   function finish(){
     el.quiz.hidden = true;
     el.result.hidden = false;
-    el.mascot.innerHTML = '<img class="mascot" src="hero.jpg" alt="웃고 있는 말풍선 캐릭터가 O와 X 표지판을 들고 있습니다">';
     el.scoreNum.textContent = score;
-    var pct = score / TOTAL;
-    var title, sub, stamp, msg;
+    el.scoreDen.textContent = '/ ' + TOTAL + ' 문제 정답';
+    el.resultSub.textContent = TOTAL + '문제 중 ' + score + '문제 정답';
+    el.bar.style.width = '100%';
+    el.count.innerHTML = '<b>' + TOTAL + '</b> / ' + TOTAL;
+
+    var title, msg;
     if (score === TOTAL){
-      title = '완벽해요! 열 문제 모두 정답입니다';
-      sub = '카카오톡 박사님이세요';
-      stamp = '100점';
-      msg = '정말 대단하세요. 오늘 배운 <b>전송 버튼 길게 누르기</b>만 기억하셔도 카카오톡이 훨씬 편해집니다. 가족이나 친구에게도 알려 주세요.';
-    } else if (pct >= 0.8){
-      title = '아주 잘하셨어요!';
-      sub = '거의 다 맞히셨습니다';
-      stamp = '참 잘했어요';
-      msg = '틀린 문제도 해설을 다시 보시면 금방 익숙해집니다. 오늘 배운 기능을 한 번만 직접 눌러 보시면 오래 기억에 남아요.';
-    } else if (pct >= 0.5){
-      title = '잘하고 계세요!';
-      sub = '절반 넘게 맞히셨습니다';
-      stamp = '좋아요';
-      msg = '처음 풀어 보셨는데 이 정도면 충분합니다. <b>전송 버튼을 길게 꾹</b> 누르는 것부터 오늘 한 번 해 보세요. 다시 풀면 더 잘하실 수 있어요.';
+      title = '20문제 모두 정답입니다';
+      msg = '카카오톡 숨은 기능을 정확히 짚으셨습니다. 오늘 배운 기능을 한 번씩 직접 눌러 보시면 오래 남습니다.';
+    } else if (score >= 17){
+      title = '거의 다 짚으셨습니다';
+      msg = '아래 <b>다시 볼 문제</b>의 해설만 확인해 두시면 충분합니다.';
+    } else if (score >= 12){
+      title = '절반 이상 정답입니다';
+      msg = '틀린 문항은 대부분 헷갈리기 쉬운 부분입니다. 아래 핵심 기능 다섯 가지만 기억하셔도 실제로 쓰시는 데는 무리가 없습니다.';
     } else {
-      title = '괜찮아요, 다시 한 번!';
-      sub = '오늘은 여기까지, 내일 또 도전해요';
-      stamp = '한 걸음 더';
-      msg = '한 번에 다 외우지 않아도 됩니다. 해설을 다시 읽어 보시고 <b>처음부터 다시 풀기</b>를 눌러 보세요. 두 번째엔 훨씬 쉬우실 거예요.';
+      title = '오늘은 여기까지입니다';
+      msg = '한 번에 외우지 않으셔도 됩니다. 아래 <b>핵심 기능</b> 다섯 가지만 먼저 익히시고, 다시 한 번 풀어 보십시오.';
     }
     el.resultTitle.textContent = title;
-    el.scoreSub.textContent = sub;
-    el.stamp.textContent = stamp;
     el.msg.innerHTML = msg;
-    el.bar.style.width = '100%';
-    el.bar.classList.add('done');
-    el.count.innerHTML = TOTAL + ' <small>/ ' + TOTAL + '</small>';
+
+    var wrongs = [];
+    for (var i = 0; i < picked.length; i++){
+      if (picked[i] && !picked[i].ok) wrongs.push({ n:i + 1, q:picked[i].q, a:picked[i].answer });
+    }
+    if (wrongs.length){
+      el.wrongBlock.hidden = false;
+      el.wrongList.innerHTML = wrongs.map(function(w){
+        return '<li><span class="n">' + pad(w.n) + '</span><span>' + w.q +
+               ' <em>정답 ' + w.a + '</em></span></li>';
+      }).join('');
+    } else {
+      el.wrongBlock.hidden = true;
+      el.wrongList.innerHTML = '';
+    }
     window.scrollTo({top:0, behavior:'smooth'});
   }
 
   el.btnO.addEventListener('click', function(){ answer('O'); });
   el.btnX.addEventListener('click', function(){ answer('X'); });
   el.next.addEventListener('click', function(){
-    if (idx >= TOTAL) { finish(); } else { render(); }
+    if (idx >= TOTAL) finish(); else render();
   });
   el.again.addEventListener('click', function(){
     idx = 0; score = 0; picked = [];
     el.result.hidden = true;
     el.quiz.hidden = false;
-    el.bar.classList.remove('done');
     render();
+  });
+
+  document.addEventListener('keydown', function(e){
+    if (!el.result.hidden) return;
+    var k = e.key;
+    if (!locked && (k === '1' || k === 'o' || k === 'O')){ answer('O'); return; }
+    if (!locked && (k === '2' || k === 'x' || k === 'X')){ answer('X'); return; }
+    if (locked && (k === 'Enter' || k === ' ')){
+      e.preventDefault();
+      if (idx >= TOTAL) finish(); else render();
+    }
   });
 
   render();
