@@ -459,26 +459,22 @@
     el.quiz.hidden = true;
     el.result.hidden = false;
     el.scoreNum.textContent = score;
-    el.scoreDen.textContent = '/ ' + TOTAL + ' 문제 정답';
+    el.scoreDen.textContent = '/ ' + TOTAL;
     el.resultSub.textContent = TOTAL + '문제 중 ' + score + '문제 정답';
     el.bar.style.width = '100%';
     el.count.innerHTML = '<b>' + TOTAL + '</b> / ' + TOTAL;
 
-    var title, msg;
+    var msg;
     if (score === TOTAL){
-      title = '20문제 모두 정답입니다';
-      msg = '카카오톡 숨은 기능을 정확히 짚으셨습니다. 오늘 배운 기능을 한 번씩 직접 눌러 보시면 오래 남습니다.';
+      msg = '<b>20문제 모두 정답입니다.</b> 카카오톡 숨은 기능을 정확히 짚으셨습니다. 오늘 배운 기능을 한 번씩 직접 눌러 보시면 오래 남습니다.';
     } else if (score >= 17){
-      title = '거의 다 짚으셨습니다';
-      msg = '아래 <b>다시 볼 문제</b>의 해설만 확인해 두시면 충분합니다.';
+      msg = '<b>거의 다 짚으셨습니다.</b> 아래 다시 볼 문제의 해설만 확인해 두시면 충분합니다.';
     } else if (score >= 12){
-      title = '절반 이상 정답입니다';
-      msg = '틀린 문항은 대부분 헷갈리기 쉬운 부분입니다. 아래 핵심 기능 다섯 가지만 기억하셔도 실제로 쓰시는 데는 무리가 없습니다.';
+      msg = '<b>절반 이상 정답입니다.</b> 틀린 문항은 대개 헷갈리기 쉬운 부분입니다. 아래 핵심 기능 다섯 가지만 기억하셔도 실제로 쓰시는 데는 무리가 없습니다.';
     } else {
-      title = '오늘은 여기까지입니다';
-      msg = '한 번에 외우지 않으셔도 됩니다. 아래 <b>핵심 기능</b> 다섯 가지만 먼저 익히시고, 다시 한 번 풀어 보십시오.';
+      msg = '<b>한 번에 외우지 않으셔도 됩니다.</b> 아래 핵심 기능 다섯 가지만 먼저 익히시고, 다시 한 번 풀어 보십시오.';
     }
-    el.resultTitle.textContent = title;
+    el.resultTitle.textContent = '수고하셨습니다';
     el.msg.innerHTML = msg;
 
     var wrongs = [];
