@@ -93,7 +93,8 @@
   .choice:hover{filter:brightness(1.08)}
   .choice:active{transform:translateY(2px);filter:brightness(.96)}
   .choice:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
-  .choice.dim{opacity:.32;filter:grayscale(.4)}
+  .choice.dim{background:#E9ECF0;color:#AEB5C0;cursor:default}
+  .choice.dim .cap{color:#B7BDC7}
   .choice.correct{box-shadow:0 0 0 3px #fff,0 0 0 5px var(--navy)}
   @keyframes nudge{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
   .choice.wrong{animation:nudge .32s ease}
