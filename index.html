@@ -130,12 +130,12 @@
   .result{animation:rise .38s ease both;padding-top:20px}
   .result-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:28px 22px 24px}
   .res-label{display:block;font-size:12.5px;font-weight:700;letter-spacing:.18em;color:var(--ink-3)}
-  .res-title{margin:10px 0 0;font-size:clamp(25px,6.6vw,30px);font-weight:700;letter-spacing:-.02em;line-height:1.4;word-break:keep-all}
-  .res-sub{margin:8px 0 0;font-size:17px;color:var(--ink-2);word-break:keep-all}
-  .score{display:flex;align-items:baseline;gap:8px;margin:22px 0 0;padding-bottom:22px;border-bottom:1px solid var(--line-soft)}
+  .res-title{margin:10px 0 2px;font-size:clamp(25px,6.6vw,30px);font-weight:700;letter-spacing:-.02em;line-height:1.4;word-break:keep-all}
+  .res-sub{margin:8px 0 0;font-size:15.5px;color:var(--ink-3);letter-spacing:.02em;word-break:keep-all}
+  .score{display:flex;align-items:baseline;gap:8px;margin:18px 0 0}
   .score-num{font-size:clamp(60px,17vw,76px);font-weight:300;color:var(--navy);line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
   .score-den{font-size:20px;font-weight:500;color:var(--ink-3)}
-  .res-msg{margin:22px 0 0;font-size:17px;line-height:1.75;color:var(--ink-2);word-break:keep-all}
+  .res-msg{margin:22px 0 0;padding-top:20px;border-top:1px solid var(--line-soft);font-size:17px;line-height:1.75;color:var(--ink-2);word-break:keep-all}
   .res-msg b{color:var(--ink);font-weight:700}
   .block{margin-top:26px}
   .block h2{margin:0 0 12px;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--ink-2)}
@@ -212,11 +212,11 @@
     <div class="result-card">
       <span class="res-label">결과</span>
       <h1 class="res-title" id="resultTitle">수고하셨습니다</h1>
-      <p class="res-sub" id="resultSub"></p>
       <div class="score">
         <span class="score-num" id="scoreNum">0</span>
-        <span class="score-den" id="scoreDen">/ 20 문제 정답</span>
+        <span class="score-den" id="scoreDen">/ 20</span>
       </div>
+      <p class="res-sub" id="resultSub"></p>
       <p class="res-msg" id="msg"></p>
 
       <div class="block">
@@ -287,7 +287,7 @@
     /* 홈 화면 아이콘 길게 : 앱 그리드 */
     grid: ic('<rect x="8" y="8" width="12" height="12" rx="3" '+S1+'/><rect x="26" y="8" width="12" height="12" rx="3" '+S1+'/><rect x="8" y="26" width="12" height="12" rx="3" '+S1+'/><rect x="26" y="26" width="12" height="12" rx="3" '+S2+'/><circle cx="24" cy="24" r="20" '+S1+' opacity=".28"/>'),
     /* 서식 : A + 취소선 */
-    format: ic('<path d="M15 34l9-20 9 20" '+S1+'/><path d="M19.4 27h9.2" '+S1+'/><path d="M9 24h30" '+S2+'/>'),
+    format: ic('<path d="M11 15h26M11 24h26M11 33h16" '+S1+'/><path d="M7 24h34" '+S2+'/>'),
     /* 연속 캡처 : 겹친 프레임 */
     capture: ic('<rect x="8" y="10" width="22" height="22" rx="3.5" '+S1+'/><rect x="18" y="18" width="22" height="22" rx="3.5" '+S2+'/>'),
     /* 캡처 저장 : 아래 화살표 + 트레이 */
