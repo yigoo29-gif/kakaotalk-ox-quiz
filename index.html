@@ -49,11 +49,24 @@
     padding-top:calc(0px + env(safe-area-inset-top));
   }
   .top-in{max-width:600px;margin:0 auto;padding:14px 18px 12px}
-  .top-row{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+  .top-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
   .brand{font-size:15px;font-weight:700;letter-spacing:.14em;color:var(--navy)}
   .brand i{font-style:normal;color:var(--ink-3);font-weight:400;padding:0 4px}
+  .top-right{display:flex;align-items:center;gap:10px}
   .count{font-size:15px;font-weight:600;color:var(--ink-3);letter-spacing:.04em;font-variant-numeric:tabular-nums}
   .count b{font-size:19px;font-weight:700;color:var(--ink);letter-spacing:0}
+  .snd{
+    appearance:none;margin:0;padding:0;width:34px;height:34px;flex:none;
+    display:flex;align-items:center;justify-content:center;
+    border:1px solid var(--line);border-radius:9px;background:#FBFBFC;color:var(--navy);
+    cursor:pointer;touch-action:manipulation;
+    transition:background .16s ease,border-color .16s ease,color .16s ease;
+  }
+  .snd svg{width:19px;height:19px;display:block}
+  .snd:hover{background:#F2F4F7}
+  .snd:active{transform:translateY(1px)}
+  .snd:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+  .snd.off{color:var(--ink-3);border-color:var(--line-soft);background:#F7F8FA}
   .bar{height:3px;background:var(--line-soft);margin-top:12px;overflow:hidden}
   .bar-fill{height:100%;width:0;background:var(--navy);transition:width .45s cubic-bezier(.2,.8,.2,1)}
 
@@ -133,9 +146,9 @@
   .res-label{display:block;font-size:12.5px;font-weight:700;letter-spacing:.18em;color:var(--ink-3)}
   .res-title{margin:10px 0 2px;font-size:clamp(25px,6.6vw,30px);font-weight:700;letter-spacing:-.02em;line-height:1.4;word-break:keep-all}
   .res-sub{margin:8px 0 0;font-size:15.5px;color:var(--ink-3);letter-spacing:.02em;word-break:keep-all}
-  .score{display:flex;align-items:baseline;gap:8px;margin:18px 0 0}
-  .score-num{font-size:clamp(60px,17vw,76px);font-weight:300;color:var(--navy);line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-  .score-den{font-size:20px;font-weight:500;color:var(--ink-3)}
+  .score{display:flex;align-items:baseline;gap:6px;margin:16px 0 0}
+  .score-num{font-size:clamp(62px,18vw,78px);font-weight:300;color:var(--navy);line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+  .score-den{font-size:26px;font-weight:600;color:var(--navy);letter-spacing:0}
   .res-msg{margin:22px 0 0;padding-top:20px;border-top:1px solid var(--line-soft);font-size:17px;line-height:1.75;color:var(--ink-2);word-break:keep-all}
   .res-msg b{color:var(--ink);font-weight:700}
   .block{margin-top:26px}
@@ -172,7 +185,10 @@
   <div class="top-in">
     <div class="top-row">
       <span class="brand">카카오톡<i>·</i>OX 퀴즈</span>
-      <span class="count" id="count"><b>1</b> / 20</span>
+      <div class="top-right">
+        <span class="count" id="count"><b>1</b> / 20</span>
+        <button class="snd" id="sndBtn" type="button" aria-pressed="true" aria-label="효과음 끄기" title="효과음 끄기"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 8.2h2.6L10 5.2v9.6L6.6 11.8H4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12.6 7.4a3.6 3.6 0 0 1 0 5.2M14.8 5.4a6.6 6.6 0 0 1 0 9.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+      </div>
     </div>
     <div class="bar"><div class="bar-fill" id="barFill"></div></div>
   </div>
@@ -217,7 +233,7 @@
       <h1 class="res-title" id="resultTitle">수고하셨습니다</h1>
       <div class="score">
         <span class="score-num" id="scoreNum">0</span>
-        <span class="score-den" id="scoreDen">/ 20</span>
+        <span class="score-den" id="scoreDen">점</span>
       </div>
       <p class="res-sub" id="resultSub"></p>
       <p class="res-msg" id="msg"></p>
@@ -370,6 +386,7 @@
 
   var el = {
     count: document.getElementById('count'),
+    snd: document.getElementById('sndBtn'),
     bar: document.getElementById('barFill'),
     card: document.getElementById('card'),
     illust: document.getElementById('illust'),
@@ -397,6 +414,119 @@
 
   var ICON_OK = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.4l3.2 3.2L13 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   var ICON_NO = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+
+  var ICON_SND_ON = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 8.2h2.6L10 5.2v9.6L6.6 11.8H4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12.6 7.4a3.6 3.6 0 0 1 0 5.2M14.8 5.4a6.6 6.6 0 0 1 0 9.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
+  var ICON_SND_OFF = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 8.2h2.6L10 5.2v9.6L6.6 11.8H4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12.9 7.9l4.2 4.4M17.1 7.9L12.9 12.3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
+
+  /* ── 효과음 : Web Audio API 합성 (외부 오디오 파일 없음) ─────────
+     모바일·카톡 인앱 브라우저는 사용자 터치(click) 안에서 AudioContext를
+     만들거나 resume()해야 소리가 납니다. 그래서 컨텍스트는 첫 클릭
+     핸들러 안에서 지연 생성하고, 재생할 때마다 상태를 확인합니다. */
+  var Sound = (function(){
+    var AC = window.AudioContext || window.webkitAudioContext;
+    var ctx = null, master = null, on = true;
+
+    function ensure(){
+      if (!on || !AC) return null;
+      if (!ctx){
+        try{
+          ctx = new AC();
+          master = ctx.createGain();
+          master.gain.value = 0.9;
+          master.connect(ctx.destination);
+        }catch(e){ ctx = null; master = null; return null; }
+      }
+      if (ctx.state !== 'running'){
+        try{ ctx.resume(); }catch(e){}
+      }
+      return ctx;
+    }
+
+    /* 한 음 : 부드러운 어택 + 지수 감쇠, 옅은 2배음으로 종소리 결 */
+    function tone(c, freq, at, dur, peak, type){
+      var t = c.currentTime + at;
+      var osc = c.createOscillator(), g = c.createGain();
+      osc.type = type || 'sine';
+      osc.frequency.setValueAtTime(freq, t);
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(peak, t + 0.014);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      osc.connect(g); g.connect(master);
+      osc.start(t); osc.stop(t + dur + 0.03);
+
+      var o2 = c.createOscillator(), g2 = c.createGain();
+      o2.type = 'sine';
+      o2.frequency.setValueAtTime(freq * 2, t);
+      g2.gain.setValueAtTime(0.0001, t);
+      g2.gain.exponentialRampToValueAtTime(peak * 0.16, t + 0.014);
+      g2.gain.exponentialRampToValueAtTime(0.0001, t + dur * 0.5);
+      o2.connect(g2); g2.connect(master);
+      o2.start(t); o2.stop(t + dur * 0.55);
+    }
+
+    /* 낯은 저음 : 트라이앵글 + 로우패스로 둥글게 */
+    function lowTone(c, freq, at, dur, peak){
+      var t = c.currentTime + at;
+      var osc = c.createOscillator(), g = c.createGain(), lp = c.createBiquadFilter();
+      osc.type = 'triangle';
+      lp.type = 'lowpass'; lp.frequency.value = 720; lp.Q.value = 0.5;
+      osc.frequency.setValueAtTime(freq, t);
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(peak, t + 0.022);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      osc.connect(lp); lp.connect(g); g.connect(master);
+      osc.start(t); osc.stop(t + dur + 0.03);
+    }
+
+    /* 정답 : G5-B5-D6 상승 벨 (딩동댕) */
+    function correct(){
+      var c = ensure(); if (!c) return;
+      tone(c, 783.99, 0.00, 0.52, 0.17, 'sine');
+      tone(c, 987.77, 0.105, 0.56, 0.16, 'sine');
+      tone(c, 1174.66, 0.21, 0.80, 0.16, 'sine');
+    }
+
+    /* 오답 : F4-C4 내려가는 부드러운 두 음 (띠-용) */
+    function wrong(){
+      var c = ensure(); if (!c) return;
+      lowTone(c, 349.23, 0.00, 0.30, 0.14);
+      lowTone(c, 261.63, 0.16, 0.48, 0.14);
+    }
+
+    /* 결과 : C-E-G 짧은 화음 + C6 마무리 (약 1.3초) */
+    function result(){
+      var c = ensure(); if (!c) return;
+      tone(c, 523.25, 0.00, 0.70, 0.11, 'sine');
+      tone(c, 659.25, 0.02, 0.70, 0.10, 'sine');
+      tone(c, 783.99, 0.04, 0.70, 0.10, 'sine');
+      tone(c, 1046.5, 0.30, 1.05, 0.13, 'sine');
+    }
+
+    /* 소리 켤 때 확인용 작은 틱 */
+    function tick(){
+      var c = ensure(); if (!c) return;
+      tone(c, 880, 0, 0.18, 0.09, 'sine');
+    }
+
+    function toggle(){
+      on = !on;
+      if (!on){
+        if (ctx && ctx.state === 'running'){ try{ ctx.suspend(); }catch(e){} }
+      } else {
+        ensure();
+        tick();
+      }
+      return on;
+    }
+
+    return {
+      correct: correct,
+      wrong: wrong,
+      result: result,
+      toggle: toggle,
+      isOn: function(){ return on; }
+    };
+  })();
 
   function pad(n){ return (n < 10 ? '0' : '') + n; }
 
@@ -449,6 +579,7 @@
     el.badge.innerHTML = (ok ? ICON_OK : ICON_NO) + '정답 ' + q.answer;
     el.note.textContent = ok ? '맞히셨습니다' : '해설을 확인해 보십시오';
     el.why.textContent = q.why;
+    if (ok) Sound.correct(); else Sound.wrong();
 
     idx++;
     el.bar.style.width = (idx / TOTAL) * 100 + '%';
@@ -461,8 +592,8 @@
   function finish(){
     el.quiz.hidden = true;
     el.result.hidden = false;
-    el.scoreNum.textContent = score;
-    el.scoreDen.textContent = '/ ' + TOTAL;
+    el.scoreNum.textContent = score * 5;
+    el.scoreDen.textContent = '점';
     el.resultSub.textContent = TOTAL + '문제 중 ' + score + '문제 정답';
     el.bar.style.width = '100%';
     el.count.innerHTML = '<b>' + TOTAL + '</b> / ' + TOTAL;
@@ -495,7 +626,23 @@
       el.wrongList.innerHTML = '';
     }
     window.scrollTo({top:0, behavior:'smooth'});
+    Sound.result();
   }
+
+  /* 효과음 토글 */
+  function paintSound(){
+    var on = Sound.isOn();
+    el.snd.innerHTML = on ? ICON_SND_ON : ICON_SND_OFF;
+    el.snd.className = 'snd' + (on ? '' : ' off');
+    el.snd.setAttribute('aria-pressed', on ? 'true' : 'false');
+    el.snd.setAttribute('aria-label', on ? '효과음 끄기' : '효과음 켜기');
+    el.snd.setAttribute('title', on ? '효과음 끄기' : '효과음 켜기');
+  }
+  el.snd.addEventListener('click', function(){
+    Sound.toggle();
+    paintSound();
+  });
+  paintSound();
 
   el.btnO.addEventListener('click', function(){ answer('O'); });
   el.btnX.addEventListener('click', function(){ answer('X'); });
@@ -511,6 +658,7 @@
 
   document.addEventListener('keydown', function(e){
     if (!el.result.hidden) return;
+    if (e.target === el.snd) return;
     var k = e.key;
     if (!locked && (k === '1' || k === 'o' || k === 'O')){ answer('O'); return; }
     if (!locked && (k === '2' || k === 'x' || k === 'X')){ answer('X'); return; }
