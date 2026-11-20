@@ -399,7 +399,7 @@
 
   function setProgress(){
     el.count.innerHTML = '<b>' + Math.min(idx + 1, TOTAL) + '</b> / ' + TOTAL;
-    el.bar.style.width = Math.max((idx / TOTAL) * 100, 2) + '%';
+    el.bar.style.width = ((idx + 1) / TOTAL) * 100 + '%';
   }
 
   function render(){
