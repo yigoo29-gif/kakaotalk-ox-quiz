@@ -461,8 +461,8 @@
     again: document.getElementById('againBtn')
   };
 
-  var ICON_OK = '<path d="M10 25l10 10 20-22" stroke="#2E8B57" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="24" cy="24" r="21" stroke="#8FD0AC" stroke-width="3" fill="#E9F6EF"/>';
-  var ICON_NO = '<path d="M14 14l20 20M34 14L14 34" stroke="#B93B31" stroke-width="7" stroke-linecap="round"/><circle cx="24" cy="24" r="21" stroke="#F1B5AD" stroke-width="3" fill="#FDECE9"/>';
+  var ICON_OK = '<circle cx="24" cy="24" r="21" fill="#E9F6EF" stroke="#8FD0AC" stroke-width="3"/><path d="M14 25l7 7 14-16" stroke="#2E8B57" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>';
+  var ICON_NO = '<circle cx="24" cy="24" r="21" fill="#FDECE9" stroke="#F1B5AD" stroke-width="3"/><path d="M17 17l14 14M31 17L17 31" stroke="#B93B31" stroke-width="6" stroke-linecap="round"/>';
 
   function setProgress(){
     var shown = Math.min(idx + 1, TOTAL);
@@ -519,7 +519,7 @@
     el.fbRight.textContent = q.right;
     el.fbExplain.innerHTML = q.why;
     idx++;
-    setProgress();
+    el.bar.style.width = (idx / TOTAL) * 100 + '%';
     if (navigator.vibrate) { try { navigator.vibrate(ok ? 24 : [18,60,18]); } catch(e){} }
     setTimeout(function(){
       el.feedback.scrollIntoView({behavior:'smooth', block:'nearest'});
